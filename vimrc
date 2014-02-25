@@ -90,13 +90,8 @@ if has("autocmd")
 
 
 else
-
-
-  set autoindent " always set autoindenting on
-
-
+	set autoindent " always set autoindenting on
 endif " has("autocmd")
-
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -106,4 +101,16 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 
 set paste
 set sw=4 ts=4
+
+"	Tab is 4 space
+set tabstop=4
+
+"	4 space for different indent level
+set shiftwidth=4
+
+"	Display line number
 set number
+
+"	Display a status bar in the right down corner
+set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
+set laststatus=2
